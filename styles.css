@@ -1,0 +1,83 @@
+/* FONT */
+
+@font-face {
+  font-family: "HelveticaNeueLTW1GRoman";
+	font-style: normal;
+  src:
+    url("fonts/HelveticaNeueLTW1GRoman.woff2") format("woff2"),
+    url("fonts/HelveticaNeueLTW1GRoman.woff") format("woff"),
+    url("fonts/HelveticaNeueLTW1GRoman.otf") format("otf");
+}
+
+@font-face {
+  font-family: "HelveticaNeueLTW1GMd";
+	font-style: normal;
+  src:
+    url("fonts/HelveticaNeueLTW1GMd.woff2") format("woff2"),
+    url("fonts/HelveticaNeueLTW1GMd.woff") format("woff"),
+    url("fonts/HelveticaNeueLTW1GMd.otf") format("otf");
+}
+
+
+/* RESET */
+
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button,
+a {
+  all: unset;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+/* GENERAL */
+
+html,
+body {
+  font-size: 14px;
+  font-family: "HelveticaNeueLTW1GMd", sans-serif;
+  color: #4C5154;
+	line-height: 1;
+}
+
+/* PAGE STYLES*/
+
+.page {
+	height: 100vh;
+	position: relative;
+}
+.page__bg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+	vertical-align: top;
+}
+
+.page__button {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100px;
+}
+.page__button button {
+	border-radius: 23px;
+	display: flex;
+	width: 100%;
+	height: 46px;
+	justify-content: center;
+	align-items: center;
+	background: #0075F0;
+	color: #fff;
+	padding-top: 3px;
+}
+.page__button button:hover {
+	opacity: 0.5;
+}
