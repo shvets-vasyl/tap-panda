@@ -6,6 +6,52 @@
     <title>Tap Panda</title>
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "3882386275367521");
+      fbq("track", "PageView");
+
+			document.addEventListener("DOMContentLoaded", () => {
+				document
+					.getElementById("leadButton")
+					.addEventListener("click", function () {
+						fbq("track", "Lead");
+						window.location.href = "https://t.me/tappanda_bot";
+					});
+			});
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=3882386275367521&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <div class="page">
@@ -99,7 +145,7 @@
         пока не поздно!
       </div>
 
-      <a href="https://t.me/tappanda_bot" class="page__tap">
+      <div class="page__tap" id="leadButton">
         <img class="circle-panda" src="images/circle.png" />
         <span class="circle-dot-wrap">
           <svg
@@ -118,52 +164,7 @@
             />
           </svg>
         </span>
-      </a>
+      </div>
     </div>
-
-    <!-- Meta Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", "3882386275367521");
-      fbq("track", "PageView");
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const tapElement = document.querySelector(".page__tap");
-        tapElement.addEventListener("click", () => {
-          fbq("track", "Click");
-        });
-      });
-    </script>
-    <noscript>
-      <img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=3882386275367521&ev=PageView&noscript=1"
-      />
-    </noscript>
-    <!-- End Meta Pixel Code -->
   </body>
 </html>
